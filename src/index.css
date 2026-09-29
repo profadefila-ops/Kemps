@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 110s linear infinite;
+  will-change: transform;
+}
+
+@keyframes subtle-float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-subtle-float {
+  animation: subtle-float 5.5s ease-in-out infinite;
+}
+
+.animate-subtle-float-delayed {
+  animation: subtle-float 5.5s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
+@keyframes cloud-drift {
+  0%   { transform: translateX(0)    translateY(0);  }
+  100% { transform: translateX(-30px) translateY(-8px); }
+}
+
+.animate-cloud-drift {
+  animation: cloud-drift 24s ease-in-out infinite alternate;
+}
+
+/* Reduced motion: kill heavy animation for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee,
+  .animate-subtle-float,
+  .animate-subtle-float-delayed,
+  .animate-cloud-drift {
+    animation: none !important;
+  }
+}
+
+/* Instagram carousel — hide native scrollbar */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

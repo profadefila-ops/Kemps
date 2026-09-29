@@ -1,0 +1,6 @@
+{
+  "name": "Machi Café — Bold Coffee. Better Moments.",
+  "description": "Small-batch coffee, steeped slow and poured over ice. Smooth, bold and made to brighten your day.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
