@@ -23,7 +23,6 @@
     "vite": "^8.3.0"
   },
   "devDependencies": {
-    "@rolldown/binding-win32-x64-msvc": "^1.2.11",
     "@rollup/rollup-win32-x64-msvc": "^4.63.5",
     "@types/express": "^4.17.21",
     "@types/node": "^22.14.0",
